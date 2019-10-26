@@ -41,7 +41,7 @@ public class FileUploadUi extends PolymerTemplate<FileUploadUi.FileUploadUiModel
         vaadinUploadCSV.setReceiver(bufferCSV);
         vaadinUploadCSV.addSucceededListener(event -> {
             CSVImportProcessor csvImportProcessor = new CSVImportProcessor(bufferCSV);
-            csvImportProcessor.insertDBRows();
+            csvImportProcessor.insertTruckDBRows();
         });
     }
 
