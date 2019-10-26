@@ -59,6 +59,7 @@
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-upload-flow</artifactId>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -118,6 +119,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.18</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tltv.gantt</groupId>
+            <artifactId>gantt-addon</artifactId>
+            <version>1.0.4</version>
         </dependency>
     </dependencies>
 
