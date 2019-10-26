@@ -51,7 +51,7 @@ public class FileUploadUiDest extends PolymerTemplate<FileUploadUiDest.FileUploa
         vaadinUploadCSV.addSucceededListener(event -> {
             CSVImportProcessor csvImportProcessor = new CSVImportProcessor(bufferCSV);
             notification.open();
-//            csvImportProcessor.insertDestDBRows();
+            csvImportProcessor.insertDestDBRows();
         });
 
         vaadinButton.addClickListener(e ->

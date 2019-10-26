@@ -51,7 +51,7 @@ public class FileUploadUiParcel extends PolymerTemplate<FileUploadUiParcel.FileU
         vaadinUploadCSV.addSucceededListener(event -> {
             CSVImportProcessor csvImportProcessor = new CSVImportProcessor(bufferCSV);
             notification.open();
-//            csvImportProcessor.insertParcelDBRows();
+            csvImportProcessor.insertParcelDBRows();
         });
 
         vaadinButton.addClickListener(e ->
