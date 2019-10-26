@@ -1,6 +1,7 @@
 package com.sec2019.shipping.spring;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.NativeButton;
 import com.vaadin.flow.component.notification.Notification;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +15,51 @@ import com.vaadin.flow.server.PWA;
 public class MainView extends VerticalLayout {
 
     public MainView(@Autowired MessageBean bean) {
-        Button button = new Button("Click me",
-                e -> Notification.show(bean.getMessage()));
-        add(button);
+// UPLOADS
+        H2 csvTitle = new H2("Import CSVs");
+        add(csvTitle);
 
-        Button buttonCSV = new Button(
-                "Navigate to company");
-        buttonCSV.addClickListener(e ->
-                button.getUI().ifPresent(ui ->
-                        ui.navigate("admin/csvupload"))
+//        TRUCK UPLOAD
+        Button buttonCSVTruck = new Button(
+                "Upload a new trucks CSV");
+        buttonCSVTruck.addClickListener(e ->
+                buttonCSVTruck.getUI().ifPresent(ui ->
+                        ui.navigate("admin/csvuploadtrk"))
         );
-        add(buttonCSV);
+        add(buttonCSVTruck);
 
+//        Dest UPLOAD
+        Button buttonCSVDest = new Button(
+                "Upload a new destination CSV");
+        buttonCSVDest.addClickListener(e ->
+                buttonCSVDest.getUI().ifPresent(ui ->
+                        ui.navigate("admin/csvuploaddest"))
+        );
+        add(buttonCSVDest);
+
+        //        Parcel UPLOAD
+        Button buttonCSVParcel = new Button(
+                "Upload a new parcel CSV");
+        buttonCSVParcel.addClickListener(e ->
+                buttonCSVParcel.getUI().ifPresent(ui ->
+                        ui.navigate("admin/csvuploadpcl"))
+        );
+        add(buttonCSVParcel);
+
+
+        // UPLOADS
+        H2 ganttTitle = new H2("Shipment Information");
+        add(ganttTitle);
+
+
+        // GANTT Button
+        Button buttonGANTT = new Button(
+                "View Timeline");
+        buttonGANTT.addClickListener(e ->
+                buttonGANTT.getUI().ifPresent(ui ->
+                        ui.navigate("admin/gantt"))
+        );
+        add(buttonGANTT);
     }
 
 
