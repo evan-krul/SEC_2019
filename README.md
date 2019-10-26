@@ -1,7 +1,10 @@
+# Heading
+## Team 1
 
-##Team 1##
-#Nathan Darby
-#Spencer Comin
-#Katrina Chanco
-#Evan Krul
+ - Nathan Darby
+ - Spencer Comin
+ - Katrina Chanco
+ - Evan Krul
+
+ 
 
